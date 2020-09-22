@@ -10,6 +10,7 @@
   "homepage": "https://gitub.com/patternslib/pat-sortable-table",
   "main": "./src/pat-sortable-table.js",
   "dependencies": {
+    "datatables.net-dt": "^1.10.22",
     "patternslib": "https://github.com/Patternslib/Patterns#master"
   },
   "devDependencies": {
