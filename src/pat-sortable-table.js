@@ -39,7 +39,7 @@ export default Base.extend({
         }
 
         $(el).DataTable({
-            dom: '<"top"i>rt<"bottom"flp><"clear">',
+            dom: '<"top"lf>rt<"bottom"ip><"clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
             pageLength: this.options.page.length,
