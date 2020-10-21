@@ -23,7 +23,6 @@ parser.addArgument("language-search-placeholder", "Search term");
 export default Base.extend({
     name: "sortable-table",
     trigger: ".pat-sortable-table",
-    module_dt: undefined,
 
     async init(el, opts) {
         if (el.jquery) {
@@ -31,7 +30,7 @@ export default Base.extend({
         }
         this.el = el;
         this.options = parser.parse(el, opts);
-        this.module_dt = await import("datatables.net");
+        await import("datatables.net");
 
         let pageLengthMenu = this.options.page["length-menu"];
         if (typeof pageLengthMenu === "string") {
@@ -39,7 +38,8 @@ export default Base.extend({
         }
 
         $(el).DataTable({
-            dom: '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
+            dom:
+                '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
             pageLength: this.options.page.length,
