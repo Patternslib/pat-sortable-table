@@ -15,6 +15,8 @@ parser.addArgument("paging-type", "numbers", [
 parser.addArgument("page-length", 20);
 parser.addArgument("page-length-menu", [10, 20, 50, 100]);
 parser.addArgument("language-info", "Page _PAGE_ of _PAGES_");
+parser.addArgument("language-info-empty", "Showing 0 to 0 of 0 entries");
+parser.addArgument("language-info-filtered", "(filtered from _MAX_ total entries)"); // prettier-ignore
 parser.addArgument("language-length-menu", "Show _MENU_ entries per page.");
 parser.addArgument("language-zero-records", "No results found.");
 parser.addArgument("language-search", "Search");
@@ -37,6 +39,8 @@ export default Base.extend({
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
+        debugger;
+
         $(el).DataTable({
             dom:
                 '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
@@ -46,6 +50,8 @@ export default Base.extend({
             aLengthMenu: pageLengthMenu,
             language: {
                 info: this.options.language.info,
+                infoEmpty: this.options.language["info-empty"],
+                infoFiltered: this.options.language["info-filtered"],
                 lengthMenu: this.options.language["length-menu"],
                 zeroRecords: this.options.language["zero-records"],
                 search: this.options.language.search,

@@ -81,14 +81,18 @@ describe("pat-sortable-table", () => {
         );
         expect(
             document
-                .querySelector(".dataTables_filter input")
+                .querySelector(".dataTables_filter input[type=search]")
                 .getAttribute("placeholder")
         ).toBe("type term");
 
-        // TODO: test filtering
-        // const input = document.querySelector(".dataTables_filter input");
-        // input.value = "fantasy item";
-        // input.dispatchEvent(new Event("change"));
+        //// TODO: test filtering
+        //const input = document.querySelector(
+        //    ".dataTables_filter input[type=search]"
+        //);
+        //input.value = "fantasy item";
+        //input.dispatchEvent(new Event("change"));
+        //$(input).change();
+        //console.log(document.body.innerHTML);
 
         done();
     });
