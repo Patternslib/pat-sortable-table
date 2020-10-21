@@ -39,8 +39,6 @@ export default Base.extend({
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
-        debugger;
-
         $(el).DataTable({
             dom:
                 '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
