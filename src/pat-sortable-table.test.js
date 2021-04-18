@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime"; // needed for ``await`` support
 import pattern from "./pat-sortable-table";
-import utils from "patternslib/src/core/utils";
+import utils from "@patternslib/patternslib/src/core/utils";
 
 describe("pat-sortable-table", () => {
     beforeEach(() => {
@@ -10,9 +10,7 @@ describe("pat-sortable-table", () => {
     it("is initialized correctly and allows sorting", async (done) => {
         document.body.innerHTML = small_table;
 
-        const instance = pattern.init(
-            document.querySelector(".pat-sortable-table")
-        );
+        pattern.init(document.querySelector(".pat-sortable-table"));
         await utils.timeout(1);
 
         let td;
@@ -62,9 +60,7 @@ describe("pat-sortable-table", () => {
              language-search-placeholder: type term;`
         );
 
-        const instance = pattern.init(
-            document.querySelector(".pat-sortable-table")
-        );
+        pattern.init(document.querySelector(".pat-sortable-table"));
         await utils.timeout(1);
 
         expect(document.querySelectorAll("tbody").length).toBe(1);
@@ -76,9 +72,7 @@ describe("pat-sortable-table", () => {
                 .querySelector(".dataTables_length")
                 .textContent.indexOf("per page") > -1
         ).toBeTruthy();
-        expect(document.querySelector(".dataTables_filter").textContent).toBe(
-            "find"
-        );
+        expect(document.querySelector(".dataTables_filter").textContent).toBe("find");
         expect(
             document
                 .querySelector(".dataTables_filter input[type=search]")

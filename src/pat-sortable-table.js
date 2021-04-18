@@ -1,7 +1,6 @@
-import $ from "jquery";
 import "regenerator-runtime/runtime"; // needed for ``await`` support
-import Base from "patternslib/src/core/base";
-import Parser from "patternslib/src/core/parser";
+import Base from "@patternslib/patternslib/src/core/base";
+import Parser from "@patternslib/patternslib/src/core/parser";
 
 const parser = new Parser("sortable-table");
 parser.addArgument("paging-type", "numbers", [
@@ -26,12 +25,8 @@ export default Base.extend({
     name: "sortable-table",
     trigger: ".pat-sortable-table",
 
-    async init(el, opts) {
-        if (el.jquery) {
-            el = el[0];
-        }
-        this.el = el;
-        this.options = parser.parse(el, opts);
+    async init() {
+        this.options = parser.parse(this.$el, this.options);
         await import("datatables.net");
 
         let pageLengthMenu = this.options.page["length-menu"];
@@ -39,9 +34,8 @@ export default Base.extend({
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
-        $(el).DataTable({
-            dom:
-                '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
+        this.$el.DataTable({
+            dom: '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
             pageLength: this.options.page.length,

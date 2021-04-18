@@ -1,10 +1,11 @@
 {
-    "name": "pat-PATTERN_TEMPLATE",
+    "name": "pat-sortable-table",
     "version": "1.0.0",
-    "description": "A pattern for PATTERN_TEMPLATE",
+    "description": "A pattern for interactive tables.",
     "license": "MIT",
-    "main": "./src/PATTERN_TEMPLATE.js",
+    "main": "./src/pat-sortable-table.js",
     "dependencies": {
+        "datatables.net-dt": "^1.10.22",
         "@patternslib/patternslib": "4"
     },
     "devDependencies": {
@@ -69,9 +70,9 @@
         "name": "Syslab GesmbH",
         "email": "dev@syslab.com"
     },
-    "homepage": "https://gitub.com/patternslib/pat-PATTERN_TEMPLATE",
+    "homepage": "https://github.com/patternslib/pat-sortable-table",
     "repository": {
         "type": "git",
-        "url": "https://gitub.com/patternslib/pat-PATTERN_TEMPLATE.git"
+        "url": "https://github.com/patternslib/pat-sortable-table.git"
     }
 }
