@@ -5,7 +5,7 @@
     "license": "MIT",
     "main": "./src/pat-sortable-table.js",
     "dependencies": {
-        "datatables.net-dt": "^1.10.22",
+        "datatables.net-dt": "^1.10.24",
         "@patternslib/patternslib": "4"
     },
     "devDependencies": {
