@@ -1,6 +1,6 @@
 {
     "name": "@patternslib/pat-sortable-table",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "A pattern for interactive tables.",
     "license": "MIT",
     "main": "./src/pat-sortable-table.js",
