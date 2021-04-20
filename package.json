@@ -49,6 +49,9 @@
         "whybundled": "^2.0.0",
         "yarn": "^1.22.10"
     },
+    "resolutions": {
+        "jquery": "3.6.0"
+    },
     "scripts": {
         "start": "webpack-dev-server --config webpack.config.js --mode=development",
         "watch": "webpack --config webpack.config.js --watch --mode=development",
