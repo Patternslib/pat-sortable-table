@@ -1,3 +1,18 @@
+## [1.1.0](https://github.com/patternslib/pat-sortable-table/compare/1.0.0...1.1.0) (2021-06-15)
+
+
+### Maintenance
+
+* Test updates after jest upgrade. ([f84028f](https://github.com/patternslib/pat-sortable-table/commit/f84028f295fc780c5010611e652c0d6cc650af7a))
+* **dependencies:** Depend on Patternslib v4.4.0. ([3dade03](https://github.com/patternslib/pat-sortable-table/commit/3dade03f289e1288678049227407ca9c38401bd8))
+* **dependencies:** Upgrade datatables to 1.10.25. ([ba95de1](https://github.com/patternslib/pat-sortable-table/commit/ba95de16d5917487aed345e145515d4d745925e8))
+* **dependencies:** Upgrade dependencies on minor+patch level. ([f0f4c85](https://github.com/patternslib/pat-sortable-table/commit/f0f4c8508df3c5f2647cf8170f86829bc7cdff9d))
+* **make release-patch:** Add missing patch for patch level releases. ([569f077](https://github.com/patternslib/pat-sortable-table/commit/569f07793dbd20e33705b9e1581536f5f33d0ef9))
+* **Release:** Remove the release-web target. Only Patternslib releases are pushed to Patterns-releases on Github. ([94279a8](https://github.com/patternslib/pat-sortable-table/commit/94279a811e29b9f5df93a1408ce2e3938e4716a8))
+* **Release process:** Do not include the release commit in the changelog. ([da9b7ad](https://github.com/patternslib/pat-sortable-table/commit/da9b7adbcdbda0e2bc6e47a29cfcbfb0685efe71))
+* **webpack:** Adapt start script to recent dependency changes. ([929b13a](https://github.com/patternslib/pat-sortable-table/commit/929b13a2f583b64928bc9cdc41df3de4bad7961e))
+* **webpack:** Simplify webpack. ([2e0321a](https://github.com/patternslib/pat-sortable-table/commit/2e0321a1331c7a5e564dd28022f2109517ccfee8))
+
 ## 1.0.0 (2021-04-20)
 
 
