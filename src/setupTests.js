@@ -8,8 +8,5 @@ import "@testing-library/jest-dom/extend-expect";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
-import jquery from "jquery";
-window.$ = window.jquery = jquery;
-
 // Attach datatables to jQuery, as in tests it is not done by just importing.
 window.dt = require("datatables.net")();

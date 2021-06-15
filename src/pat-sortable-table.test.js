@@ -7,7 +7,7 @@ describe("pat-sortable-table", () => {
         document.body.innerHTML = "";
     });
 
-    it("is initialized correctly and allows sorting", async (done) => {
+    it("is initialized correctly and allows sorting", async () => {
         document.body.innerHTML = small_table;
 
         pattern.init(document.querySelector(".pat-sortable-table"));
@@ -42,11 +42,9 @@ describe("pat-sortable-table", () => {
         expect(td[1].textContent).toBe("Row 2 Data 2");
         expect(td[2].textContent).toBe("Row 1 Data 1");
         expect(td[3].textContent).toBe("Row 1 Data 2");
-
-        done();
     });
 
-    it("supports pattern options", async (done) => {
+    it("supports pattern options", async () => {
         document.body.innerHTML = small_table;
         const table = document.querySelector(".pat-sortable-table");
         table.setAttribute(
@@ -87,8 +85,6 @@ describe("pat-sortable-table", () => {
         //input.dispatchEvent(new Event("change"));
         //$(input).change();
         //console.log(document.body.innerHTML);
-
-        done();
     });
 });
 
