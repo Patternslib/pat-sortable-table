@@ -6,7 +6,7 @@
     "main": "./src/pat-sortable-table.js",
     "dependencies": {
         "datatables.net-dt": "^1.10.24",
-        "@patternslib/patternslib": "4"
+        "@patternslib/patternslib": "^4.4.0"
     },
     "devDependencies": {
         "@babel/core": "^7.13.15",
