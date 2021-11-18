@@ -1,3 +1,22 @@
+## [2.0.0](https://github.com/patternslib/pat-sortable-table/compare/1.1.0...2.0.0) (2021-11-18)
+
+
+### Breaking Changes
+
+* Upgrade to Webpack 5. ([9105f9b](https://github.com/patternslib/pat-sortable-table/commit/9105f9b6cba09cffff6f12dfeeb27f22b399b3aa))
+
+
+
+### Maintenance
+
+* **build:** Extend Patternslib release-it config file. ([039dd16](https://github.com/patternslib/pat-sortable-table/commit/039dd16cf77d2674948825d8c556698d864ad1d5))
+
+* **build:** Release on GitHub releases. ([cccfc8d](https://github.com/patternslib/pat-sortable-table/commit/cccfc8d1a0de9fb300bbebc840ddaa20c820cbcb))
+
+* **dependencies:** Upgrade datatables to 1.11.3. ([479a5df](https://github.com/patternslib/pat-sortable-table/commit/479a5dfa4beaa7b8883d93f8d13b1f61074747d9))
+
+* Upgrade up to minor versions. ([9e07d1f](https://github.com/patternslib/pat-sortable-table/commit/9e07d1f7d3da736c3efc515e3eef3b869eeebf3c))
+
 ## [1.1.0](https://github.com/patternslib/pat-sortable-table/compare/1.0.0...1.1.0) (2021-06-15)
 
 
