@@ -1,4 +1,5 @@
 import "regenerator-runtime/runtime"; // needed for ``await`` support
+import $ from "jquery";
 import Base from "@patternslib/patternslib/src/core/base";
 import Parser from "@patternslib/patternslib/src/core/parser";
 
@@ -34,7 +35,7 @@ export default Base.extend({
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
-        this.$el.DataTable({
+        $(this.el).DataTable({
             dom: '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
