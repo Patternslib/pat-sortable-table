@@ -30,6 +30,10 @@ export default Base.extend({
         this.options = parser.parse(this.$el, this.options);
         await import("datatables.net");
 
+        if (window.__patternslib_import_styles) {
+            import("datatables.net-dt/css/jquery.dataTables.css");
+        }
+
         let pageLengthMenu = this.options.page["length-menu"];
         if (typeof pageLengthMenu === "string") {
             pageLengthMenu = JSON.parse(pageLengthMenu);
