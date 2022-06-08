@@ -5,9 +5,11 @@
     "license": "MIT",
     "main": "./src/pat-sortable-table.js",
     "dependencies": {
-        "@patternslib/patternslib": "^6.0.1",
         "datatables.net-dt": "^1.11.3",
         "jquery": "^3.6.0"
+    },
+    "peerDependencies": {
+        "@patternslib/patternslib": "*"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",
