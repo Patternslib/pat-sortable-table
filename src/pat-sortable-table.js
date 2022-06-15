@@ -1,4 +1,4 @@
-import "regenerator-runtime/runtime"; // needed for ``await`` support
+import $ from "jquery";
 import Base from "@patternslib/patternslib/src/core/base";
 import Parser from "@patternslib/patternslib/src/core/parser";
 
@@ -29,12 +29,16 @@ export default Base.extend({
         this.options = parser.parse(this.$el, this.options);
         await import("datatables.net");
 
+        if (window.__patternslib_import_styles) {
+            import("datatables.net-dt/css/jquery.dataTables.css");
+        }
+
         let pageLengthMenu = this.options.page["length-menu"];
         if (typeof pageLengthMenu === "string") {
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
-        this.$el.DataTable({
+        $(this.el).DataTable({
             dom: '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
