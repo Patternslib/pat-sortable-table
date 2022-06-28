@@ -2,6 +2,16 @@
 
 
 
+## [3.0.0](https://github.com/patternslib/pat-sortable-table/compare/3.0.0-alpha.0...3.0.0) (2022-06-28)
+
+
+### Maintenance
+
+
+* @patternslib/patternslib needs to be installed. Adding to devDependencies to avoid version clashes with other packages depending on it. ([6aa63b4](https://github.com/patternslib/pat-sortable-table/commit/6aa63b4273622b04978822763114b2439323f56a))
+
+* Upgrade to @patternslib/dev 2.2.0 and adapt module federation config. ([72d8ec1](https://github.com/patternslib/pat-sortable-table/commit/72d8ec11c703c4f04a3cc920ea43a376176adaed))
+
 ## [3.0.0-alpha.0](https://github.com/patternslib/pat-sortable-table/compare/2.0.0...3.0.0-alpha.0) (2022-06-15)
 
 
