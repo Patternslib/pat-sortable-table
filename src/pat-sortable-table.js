@@ -1,6 +1,7 @@
 import $ from "jquery";
 import Base from "@patternslib/patternslib/src/core/base";
 import Parser from "@patternslib/patternslib/src/core/parser";
+import registry from "@patternslib/patternslib/src/core/registry";
 
 const parser = new Parser("sortable-table");
 parser.addArgument("paging-type", "numbers", [
@@ -13,6 +14,8 @@ parser.addArgument("paging-type", "numbers", [
 ]);
 parser.addArgument("page-length", 20);
 parser.addArgument("page-length-menu", [10, 20, 50, 100]);
+parser.addArgument("server-side", false);
+parser.addArgument("ajax", "");
 parser.addArgument("language-info", "Page _PAGE_ of _PAGES_");
 parser.addArgument("language-info-empty", "Showing 0 to 0 of 0 entries");
 parser.addArgument("language-info-filtered", "(filtered from _MAX_ total entries)"); // prettier-ignore
@@ -44,6 +47,8 @@ export default Base.extend({
             pagingType: this.options.pagingType,
             pageLength: this.options.page.length,
             aLengthMenu: pageLengthMenu,
+            serverSide: this.options.serverSide,
+            ajax: this.options.ajax,
             language: {
                 info: this.options.language.info,
                 infoEmpty: this.options.language["info-empty"],
@@ -53,6 +58,9 @@ export default Base.extend({
                 search: this.options.language.search,
                 searchPlaceholder: this.options.language["search-placeholder"],
             },
+        });
+        $(this.el).on( 'draw.dt', function () {
+            registry.scan(this); // initialize any patterns in the table
         });
     },
 });

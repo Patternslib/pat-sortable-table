@@ -13,6 +13,8 @@ Property | Default Value | Values | Type | Description
 paging-type | numbers | numbers simple simple_numbers full full_numbers first_last_numbers | String | Type of batch/paging navigation menu.
 page-length | 20 | Any number | Integer | Number of items per page.
 page-length-menu | [10, 20, 50, 100] | | Array of integers | Entries for the pagingation length menu.
+server-side | false | | boolean | Use server side processing in the table. See also `ajax`
+ajax | "" | | string, object or function | Configuration for ajax calls. Can be a URL (string), properties for jQuery.ajax (object) or custom code to get data (function).
 language-info | "Page _PAGE_ of _PAGES_" | | String | Text for pagination.
 language-info-empty | "Showing 0 to 0 of 0 entries" | | String | Info text when filtering leads to no results.
 language-info-filtered | "(filtered from _MAX_ total entries)" | | String | Info text when filtering.
