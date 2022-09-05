@@ -2,6 +2,24 @@
 
 
 
+## [3.1.0](https://github.com/patternslib/pat-sortable-table/compare/3.0.0...3.1.0) (2022-09-05)
+
+
+### Features
+
+
+* Support ajax/serverSide options of DataTables. ([c114a7a](https://github.com/patternslib/pat-sortable-table/commit/c114a7a3480193d9f39e8011cd841f3fa0063d0c)), closes [syslabcom/scrum#562](https://github.com/syslabcom/scrum/issues/562)Refs syslabcom/scrum#562
+
+
+### Maintenance
+
+
+* Unlink and re-install depenencies. ([131b4d7](https://github.com/patternslib/pat-sortable-table/commit/131b4d7f304f3012ed87f7c678e069d515682c69))
+
+* Update webpack config. ([c21957c](https://github.com/patternslib/pat-sortable-table/commit/c21957c51ff06a55571826ba1a38b6ee6918d10a))
+
+* Upgrade dependencies. ([b737d10](https://github.com/patternslib/pat-sortable-table/commit/b737d102693106d12c0882de5e8c4637bac1a34b))
+
 ## [3.0.0](https://github.com/patternslib/pat-sortable-table/compare/3.0.0-alpha.0...3.0.0) (2022-06-28)
 
 
