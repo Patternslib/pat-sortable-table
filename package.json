@@ -6,14 +6,14 @@
     "main": "./src/pat-sortable-table.js",
     "dependencies": {
         "datatables.net-dt": "^1.12.1",
-        "jquery": "^3.6.0"
+        "jquery": "^3.6.1"
     },
     "devDependencies": {
-        "@patternslib/dev": "^2.2.0",
+        "@patternslib/dev": "^2.6.0",
         "@patternslib/patternslib": "*"
     },
     "resolutions": {
-        "jquery": "3.6.0"
+        "jquery": "3.6.1"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
