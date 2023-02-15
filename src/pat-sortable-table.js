@@ -1,5 +1,5 @@
 import $ from "jquery";
-import Base from "@patternslib/patternslib/src/core/base";
+import { BasePattern } from "@patternslib/patternslib/src/core/basepattern";
 import Parser from "@patternslib/patternslib/src/core/parser";
 import registry from "@patternslib/patternslib/src/core/registry";
 
@@ -24,12 +24,12 @@ parser.addArgument("language-zero-records", "No results found.");
 parser.addArgument("language-search", "Search");
 parser.addArgument("language-search-placeholder", "Search term");
 
-export default Base.extend({
-    name: "sortable-table",
-    trigger: ".pat-sortable-table",
+class Pattern extends BasePattern {
+    static name = "sortable-table";
+    static trigger = ".pat-sortable-table";
+    static parser = parser;
 
     async init() {
-        this.options = parser.parse(this.$el, this.options);
         await import("datatables.net");
 
         if (window.__patternslib_import_styles) {
@@ -59,8 +59,13 @@ export default Base.extend({
                 searchPlaceholder: this.options.language["search-placeholder"],
             },
         });
-        $(this.el).on( 'draw.dt', function () {
+        $(this.el).on("draw.dt", function () {
             registry.scan(this); // initialize any patterns in the table
         });
-    },
-});
+    }
+}
+
+registry.register(Pattern);
+
+export default Pattern;
+export { Pattern };

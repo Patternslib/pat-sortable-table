@@ -1,16 +1,16 @@
-import pattern from "./pat-sortable-table";
-import utils from "@patternslib/patternslib/src/core/utils";
+import Pattern from "./pat-sortable-table";
+import events from "@patternslib/patternslib/src/core/events";
 
 describe("pat-sortable-table", () => {
-    beforeEach(() => {
+    afterEach(() => {
         document.body.innerHTML = "";
     });
 
     it("is initialized correctly and allows sorting", async () => {
         document.body.innerHTML = small_table;
 
-        pattern.init(document.querySelector(".pat-sortable-table"));
-        await utils.timeout(1);
+        const instance = new Pattern(document.querySelector(".pat-sortable-table"));
+        await events.await_pattern_init(instance);
 
         let td;
 
@@ -57,8 +57,8 @@ describe("pat-sortable-table", () => {
              language-search-placeholder: type term;`
         );
 
-        pattern.init(document.querySelector(".pat-sortable-table"));
-        await utils.timeout(1);
+        const instance = new Pattern(document.querySelector(".pat-sortable-table"));
+        await events.await_pattern_init(instance);
 
         expect(document.querySelectorAll("tbody").length).toBe(1);
         expect(document.querySelector(".dataTables_info").textContent).toBe(
