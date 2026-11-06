@@ -1,4 +1,3 @@
-import $ from "jquery";
 import { BasePattern } from "@patternslib/patternslib/src/core/basepattern";
 import Parser from "@patternslib/patternslib/src/core/parser";
 import registry from "@patternslib/patternslib/src/core/registry";
@@ -13,7 +12,7 @@ parser.addArgument("paging-type", "numbers", [
     "first_last_numbers",
 ]);
 parser.addArgument("page-length", 20);
-parser.addArgument("page-length-menu", [10, 20, 50, 100]);
+parser.addJSONArgument("page-length-menu", [10, 20, 50, 100]);
 parser.addArgument("server-side", false);
 parser.addArgument("ajax", "");
 parser.addArgument("language-info", "Page _PAGE_ of _PAGES_");
@@ -30,10 +29,10 @@ class Pattern extends BasePattern {
     static parser = parser;
 
     async init() {
-        await import("datatables.net");
+        const { default: DataTable } = await import("datatables.net-dt");
 
         if (window.__patternslib_import_styles) {
-            import("datatables.net-dt/css/jquery.dataTables.css");
+            import("datatables.net-dt/css/dataTables.dataTables.css");
         }
 
         let pageLengthMenu = this.options.page["length-menu"];
@@ -41,12 +40,12 @@ class Pattern extends BasePattern {
             pageLengthMenu = JSON.parse(pageLengthMenu);
         }
 
-        $(this.el).DataTable({
+        const table = new DataTable(this.el, {
             dom: '<"data-table-top"if>rt<"data-table-bottom"lp><"data-table-clear">',
             retrieve: true,
             pagingType: this.options.pagingType,
             pageLength: this.options.page.length,
-            aLengthMenu: pageLengthMenu,
+            lengthMenu: pageLengthMenu,
             serverSide: this.options.serverSide,
             ajax: this.options.ajax,
             language: {
@@ -59,8 +58,8 @@ class Pattern extends BasePattern {
                 searchPlaceholder: this.options.language["search-placeholder"],
             },
         });
-        $(this.el).on("draw.dt", function () {
-            registry.scan(this); // initialize any patterns in the table
+        table.on("draw", () => {
+            registry.scan(this.el); // initialize any patterns in the table
         });
     }
 }
