@@ -170,8 +170,8 @@ importers:
         specifier: <10
         version: 9.11.1
       datatables.net-dt:
-        specifier: ^1.13.2
-        version: 1.13.11
+        specifier: ^3.1.5
+        version: 3.1.5
     devDependencies:
       '@patternslib/dev':
         specifier: '4'
@@ -2546,11 +2546,11 @@ packages:
     resolution: {integrity: sha512-ZYP5VBHshaDAiVZxjbRVcFJpc+4xGgT0bK3vzy1HLN8jTO975HEbuYzZJcHoQEY5K1a0z8YayJkyVETa08eNTg==}
     engines: {node: '>=18'}
 
-  datatables.net-dt@1.13.11:
-    resolution: {integrity: sha512-4GpS4OFLwIMfhb5UdJh6bEnh0E52jIJOlx7KLKs1pSce/xpHjvcmucbUWNaEndQIpHXtIxmVPoqcDB0ZbiVB+A==}
+  datatables.net-dt@3.1.5:
+    resolution: {integrity: sha512-JXjpuKJmTZhndDCmi9Pz0Zkxd6sodYaMaE9KYc3x0YOGIerbRlnP0s1EJ2MWBtAkmJ0AbZo5hl8GahreMAd4hg==}
 
-  datatables.net@1.13.11:
-    resolution: {integrity: sha512-AE6RkMXziRaqzPcu/pl3SJXeRa6fmXQG/fVjuRESujvkzqDCYEeKTTpPMuVJSGYJpPi32WGSphVNNY1G4nSN/g==}
+  datatables.net@3.1.5:
+    resolution: {integrity: sha512-phu9fVz1cOhD7kZDO5Ztj15qwghCkmdwX5AezLi+PxfMtnFAq0itpewvXzdwdr6bOwPqO2zuXsXWUU5x3wQptw==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -3483,9 +3483,6 @@ packages:
 
   jquery@3.7.1:
     resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
-
-  jquery@4.0.0:
-    resolution: {integrity: sha512-TXCHVR3Lb6TZdtw1l3RTLf8RBWVGexdxL6AC8/e0xZKEpBflBsjh9/8LXw+dkNFuOyW9B7iB3O1sP7hS0Kiacg==}
 
   js-tokens@10.0.0:
     resolution: {integrity: sha512-lM/UBzQmfJRo9ABXbPWemivdCW8V2G8FHaHdypQaIy523snUjog0W71ayWXTjiR+ixeMyVHN2XcpnTd/liPg/Q==}
@@ -7793,14 +7790,11 @@ snapshots:
       whatwg-mimetype: 4.0.0
       whatwg-url: 14.2.0
 
-  datatables.net-dt@1.13.11:
+  datatables.net-dt@3.1.5:
     dependencies:
-      datatables.net: 1.13.11
-      jquery: 4.0.0
+      datatables.net: 3.1.5
 
-  datatables.net@1.13.11:
-    dependencies:
-      jquery: 4.0.0
+  datatables.net@3.1.5: {}
 
   debug@2.6.9(supports-color@8.1.1):
     dependencies:
@@ -8895,8 +8889,6 @@ snapshots:
   jquery-jcrop@0.9.15: {}
 
   jquery@3.7.1: {}
-
-  jquery@4.0.0: {}
 
   js-tokens@10.0.0: {}
 
