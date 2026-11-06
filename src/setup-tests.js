@@ -1,6 +1,3 @@
-// provide jquery
+// Provide jQuery for Patternslib. DataTables is initialized by the pattern.
 import jquery from "jquery";
 global.$ = global.jQuery = jquery;
-
-// Attach datatables to jQuery, as in tests it is not done by just importing.
-window.dt = require("datatables.net")();
