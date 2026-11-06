@@ -5,15 +5,11 @@
     "license": "MIT",
     "main": "./src/pat-sortable-table.js",
     "dependencies": {
-        "datatables.net-dt": "^1.13.2",
-        "jquery": "^3.6.3"
+        "@patternslib/patternslib": "<10",
+        "datatables.net-dt": "^1.13.2"
     },
     "devDependencies": {
-        "@patternslib/dev": "<4",
-        "@patternslib/patternslib": "<10"
-    },
-    "resolutions": {
-        "jquery": "3.6.3"
+        "@patternslib/dev": "4"
     },
     "scripts": {
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
