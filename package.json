@@ -4,6 +4,7 @@
     "description": "A pattern for interactive tables.",
     "license": "MIT",
     "main": "./src/pat-sortable-table.js",
+    "packageManager": "pnpm@12.16.1",
     "dependencies": {
         "@patternslib/patternslib": "<10",
         "datatables.net-dt": "^1.13.2"
